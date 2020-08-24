@@ -63,9 +63,9 @@ a img:hover{
 
 /* 共通部分ここから */
 body{
-  background: -moz-linear-gradient(top, #FFF, #FFC778 30%, #F89174 60%, #748af8);
-  background: -webkit-linear-gradient(top, #FFF, #FFC778 30%, #F89174 60%, #748af8);
-  background: linear-gradient(to bottom, #FFF, #FFC778 30%, #F89174 60%, #748af8);
+  background: -moz-linear-gradient(top, #FFF, #b6f3e4 30%, #62f844 60%, #03c081);
+  background: -webkit-linear-gradient(top, #FFF, #b6f3e4 30%, #62f844 60%, #03c081);
+  background: linear-gradient(to bottom, #FFF, #b6f3e4 30%, #62f844 60%, #03c081);
 }
 
 /* ヘッダー部分ここから */
@@ -119,6 +119,7 @@ body{
 .Home{
   position: relative;
   height: 100%;
+  margin-bottom: 0;
   z-index: 15;
 }
 .pc{
@@ -150,10 +151,11 @@ body{
   font-weight: bold;
 }
 .uk-section-muted{
-  background: -moz-linear-gradient(bottom, #FFC778, #FFF);
-  background: -webkit-linear-gradient(bottom, #FFC778, #FFF);
-  background: linear-gradient(to top, #FFC778, #FFF);
+  background: #FFF;
   z-index: 10;
+}
+.uk-margin-large-top{
+  margin-top: 0 !important;
 }
 .fadeInUp{
   opacity : 0;
@@ -162,28 +164,33 @@ body{
 }
 .profile{
   text-align: center;
+  background: url(/img/grass.png);
+  border: 1px solid rgb(190, 168, 204);
 }
 .profile img{
   border-radius: 50%;
   box-shadow:  2px 2px 4px gray;
 }
-.About h2{
+.About-text h2{
+  margin-top: 20px;
   font-weight: bold;
   text-align: center;
   font-family: 'Haettenschweiler', sans-serif;
   font-size: 25px;
 }
-.About p{
-  margin: 30px;
+.About-text p{
+  margin: 40px;
+  font-size: 15px;
 }
-.About span{
+.About-text span{
   font-weight: bold;
 }
 .my-name{
   font-family: 'Monotype Corsiva', fantasy;
   font-size: 23px;
   font-weight: bold;
-  margin: 20px 0px 20px 30px;
+  color: #3f87ce;
+  margin: 20px 0px 20px 80px;
 }
 .fadeInUp-sub{
   opacity : 0;
@@ -223,7 +230,7 @@ body{
 
 /* フッターはここから */
 .footer{
-  background: #333;
+  background: rgb(1, 82, 43);
 }
 .footer a{
   color: #fff;
@@ -347,7 +354,11 @@ body{
     top: 110px;
     margin-left: 10px;
   }
+  .About{
+    padding-bottom: auto;
+  }
   .my-name{
     text-align: center;
+    margin-left: 0;
   }
 }
