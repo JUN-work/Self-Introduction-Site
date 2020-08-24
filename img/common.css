@@ -1,0 +1,364 @@
+@charset "utf-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body{
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  font-family: 'Hiragino Kaku Gothic Pro', 'メイリオ', 'ＭＳ Ｐゴシック', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+ol, ul, li{
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+select{
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+a img{
+  transition:all 0.3s;
+}
+a img:hover{
+  opacity: 0.7;
+}
+*{box-sizing: border-box;}
+
+/* 共通部分ここから */
+body{
+  background: -moz-linear-gradient(top, #FFF, #b6f3e4 30%, #62f844 60%, #03c081);
+  background: -webkit-linear-gradient(top, #FFF, #b6f3e4 30%, #62f844 60%, #03c081);
+  background: linear-gradient(to bottom, #FFF, #b6f3e4 30%, #62f844 60%, #03c081);
+}
+
+/* ヘッダー部分ここから */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 0px;
+  background:rgba(255, 255, 255, 0.5);
+  z-index: 100;
+}
+.header img{
+  width: 100%;
+  display: block;
+}
+.header-inner{
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+}
+.logo{
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+}
+.logo img{
+  height: 60px;
+}
+.menu{
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translateY(-50%);
+}
+.menu-list a{
+  color: #000;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: medium;
+}
+.menu a:last-child{
+  margin-right: 0;
+}
+
+/* メイン部分ここから */
+.Home{
+  position: relative;
+  height: 100%;
+  margin-bottom: 0;
+  z-index: 15;
+}
+.pc{
+  display: block !important;
+}
+.sp{
+  display: none !important;
+}
+.uk-container.title{
+  position: absolute;
+  top: 350px;
+  margin-left: 200px;
+  z-index: 20;
+}
+.uk-container.title h1{
+  font-size: 25px;
+  color: aliceblue;
+  font-weight: bold;
+}
+.uk-container.sub-title{
+  position: absolute;
+  top: 450px;
+  margin-left: 200px;
+  z-index: 20;
+}
+.uk-container.sub-title h2{
+  font-size: 40px;
+  color: aliceblue;
+  font-weight: bold;
+}
+.uk-section-muted{
+  background: #FFF;
+  z-index: 10;
+}
+.uk-margin-large-top{
+  margin-top: 0 !important;
+}
+.fadeInUp{
+  opacity : 0;
+  transform: translateY(20px);
+  transition: 2s;
+}
+.profile{
+  text-align: center;
+  background: url(/img/grass.png);
+  border: 1px solid rgb(190, 168, 204);
+}
+.profile img{
+  border-radius: 50%;
+  box-shadow:  2px 2px 4px gray;
+}
+.About-text h2{
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Haettenschweiler', sans-serif;
+  font-size: 25px;
+}
+.About-text p{
+  margin: 40px;
+  font-size: 15px;
+}
+.About-text span{
+  font-weight: bold;
+}
+.my-name{
+  font-family: 'Monotype Corsiva', fantasy;
+  font-size: 23px;
+  font-weight: bold;
+  color: #3f87ce;
+  margin: 20px 0px 20px 80px;
+}
+.fadeInUp-sub{
+  opacity : 0;
+  transform: translateY(100px);
+  transition: 3s;
+}
+.container.Skill{
+  text-align: center;
+  padding: 3em 1em;
+  margin: 2em auto;
+  color: #FFF;
+  background: #6eb7ff;
+  border-bottom: solid 6px #3f87ce;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+.container.Skill h3{
+  font-family: 'Haettenschweiler', sans-serif;
+  font-size: 40px;
+  margin: 10px 0;
+}
+.animate__headShake{
+  /* ５秒かけてアニメーションする */
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+.Skill-title{
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.Skill-level li{
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 40px;
+}
+
+/* フッターはここから */
+.footer{
+  background: rgb(1, 82, 43);
+}
+.footer a{
+  color: #fff;
+}
+.footer-logo{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 1.5px 1.5px 0px;
+}
+.footer-inner{
+  padding: 25px 0;
+}
+.footer img{
+  width: 100%;
+}
+.sns{
+  text-align: center;
+}
+.sns li{
+  display: inline-block;
+  margin: 0 10px;
+}
+.sns li a{
+  display: flex;
+  align-items: center;
+}
+.sns li .sns-icon{
+  width: 25px;
+  margin-right: 10px;
+}
+.footer-link{
+  background: #000;
+  font-size: 12px;
+  padding: 10px;
+  text-align: center;
+}
+.footer-link p{
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+}
+
+/* ロード画面部分 */
+/* .loader{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.95);
+  z-index: 10;
+}
+.loader-inner{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 50px;
+  height: 100px;
+}
+.line{
+  width: 8px;
+  position: absolute;
+  border-radius: 5px;
+  bottom: 0;
+  left: 50%;
+  background: linear-gradient(to top, #f599fa, #45f3d1);
+}
+.line1{
+  left: 0;
+  animation: loader 0.3s ease alternate infinite;
+}
+.line2{
+  left: 20px;
+  animation: loader 0.3s 0.2s ease alternate infinite;
+}
+.line3{
+  left: 40px;
+  animation: loader 0.3s 0.4s ease alternate infinite;
+}
+@keyframes loader {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 75%;
+  }
+} */
+
+@media screen and (max-width: 768px){
+  /* ヘッダー部分ここから */
+  .header{
+    height: 45px;
+  }
+  .logo{
+    left: 10px;
+  }
+  .menu{
+    left: 35%;
+  }
+  .menu-list a{
+    font-size: 15px;
+  }
+
+  /* メイン部分ここから */
+  .Home{
+    height: auto;
+  }
+  .pc{
+    display: none !important;
+  }
+  .sp{
+    display: block !important;
+  }
+  .uk-container.title{
+    top: 60px;
+    margin-left: 50px;
+  }
+  .uk-container.sub-title{
+    top: 110px;
+    margin-left: 10px;
+  }
+  .About{
+    padding-bottom: auto;
+  }
+  .my-name{
+    text-align: center;
+    margin-left: 0;
+  }
+}
